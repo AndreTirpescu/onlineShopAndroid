@@ -1,4 +1,4 @@
-package com.example.onlineshopandroid;
+package com.example.onlineshopandroid.product;
 
 public class Product
 {

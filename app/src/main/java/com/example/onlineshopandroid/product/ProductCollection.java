@@ -1,4 +1,4 @@
-package com.example.onlineshopandroid;
+package com.example.onlineshopandroid.product;
 
 import java.util.ArrayList;
 import java.util.List;

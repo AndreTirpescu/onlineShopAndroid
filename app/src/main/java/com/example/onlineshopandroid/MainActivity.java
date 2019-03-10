@@ -5,6 +5,12 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.ListView;
 
+import com.example.onlineshopandroid.product.Product;
+import com.example.onlineshopandroid.product.ProductCollection;
+import com.example.onlineshopandroid.product.ProductCollectionBuilder;
+import android.view.Menu;
+
+
 public class MainActivity extends AppCompatActivity
 {
     static final String MAIN_ACTIVITY_TAG = "[MAIN_ACTIVITY]";
@@ -55,5 +61,12 @@ public class MainActivity extends AppCompatActivity
     {
         super.onDestroy();
         Log.i(MAIN_ACTIVITY_TAG, "onDestroy called");
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu)
+    {
+        getMenuInflater().inflate(R.menu.main_menu, menu);
+        return true;
     }
 }

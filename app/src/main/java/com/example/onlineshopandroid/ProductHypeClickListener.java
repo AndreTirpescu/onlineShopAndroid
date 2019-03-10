@@ -5,6 +5,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.view.View;
 import android.widget.AdapterView;
+import com.example.onlineshopandroid.product.Product;
+import com.example.onlineshopandroid.product.ProductCollection;
 
 public class ProductHypeClickListener implements AdapterView.OnItemClickListener
 {

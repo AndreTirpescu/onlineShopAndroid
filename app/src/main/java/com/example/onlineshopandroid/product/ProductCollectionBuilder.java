@@ -1,7 +1,7 @@
-package com.example.onlineshopandroid;
+package com.example.onlineshopandroid.product;
 
-public class ProductCollectionBuilder {
-
+public class ProductCollectionBuilder
+{
     public ProductCollection build()
     {
         return new ProductCollection()
@@ -16,5 +16,4 @@ public class ProductCollectionBuilder {
                 .add(new Product("Product9", 9.0, "Description 9","Kill me now"))
                 .add(new Product("Product10", 10.0, "Description 10", "What am I doing here"));
     }
-
 }

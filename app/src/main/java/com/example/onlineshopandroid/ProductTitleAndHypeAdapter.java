@@ -9,6 +9,9 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
+import com.example.onlineshopandroid.product.Product;
+import com.example.onlineshopandroid.product.ProductCollection;
+
 public class ProductTitleAndHypeAdapter extends ArrayAdapter<Product>
 {
     private Context context;
