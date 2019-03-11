@@ -2,6 +2,7 @@ package com.example.onlineshopandroid;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
 import android.widget.TextView;
 
 public class ProductDetailsActivity extends AppCompatActivity
@@ -24,5 +25,12 @@ public class ProductDetailsActivity extends AppCompatActivity
 
         TextView descriptionView = (TextView) findViewById(R.id.description);
         descriptionView.setText(description);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu)
+    {
+        getMenuInflater().inflate(R.menu.main_menu, menu);
+        return true;
     }
 }
