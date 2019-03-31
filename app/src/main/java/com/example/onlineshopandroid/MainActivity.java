@@ -1,8 +1,13 @@
 package com.example.onlineshopandroid;
 
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.widget.ListView;
 
 import com.example.onlineshopandroid.product.Product;
@@ -68,5 +73,45 @@ public class MainActivity extends AppCompatActivity
     {
         getMenuInflater().inflate(R.menu.main_menu, menu);
         return true;
+    }
+
+    public boolean onOptionsItemSelected(MenuItem item)
+    {
+        switch (item.getItemId())
+        {
+            case R.id.home_menu:
+                AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
+                alertDialogBuilder.setMessage("You are already home")
+                        .setTitle("Alert");
+                alertDialogBuilder.create().show();
+                break;
+            case R.id.about_menu:
+                Intent intent = new Intent(getApplicationContext(), AppInfoActivity.class);
+                getApplicationContext().startActivity(intent);
+                break;
+            case R.id.login_menu:
+                AlertDialog.Builder secondAlertBuilder = new AlertDialog.Builder(this);
+                LayoutInflater layoutInflater = getLayoutInflater();
+
+                secondAlertBuilder.setView(layoutInflater.inflate(R.layout.login_dialog, null))
+                    .setPositiveButton("Login", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int id) {
+
+                        }
+                    })
+                    .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int id) {
+
+                        }
+                    });
+
+                secondAlertBuilder.create().show();
+                break;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 }
