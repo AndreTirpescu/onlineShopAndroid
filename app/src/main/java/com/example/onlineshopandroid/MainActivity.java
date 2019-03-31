@@ -108,6 +108,14 @@ public class MainActivity extends AppCompatActivity
 
                 secondAlertBuilder.create().show();
                 break;
+            case R.id.settings_menu:
+                Intent settingsIntent = new Intent(getApplicationContext(), SettingsActivity.class);
+                getApplicationContext().startActivity(settingsIntent);
+                break;
+            case R.id.notes_menu:
+                Intent notesIntent = new Intent(getApplicationContext(), NotesActivity.class);
+                getApplicationContext().startActivity(notesIntent);
+                break;
             default:
                 return super.onOptionsItemSelected(item);
         }
