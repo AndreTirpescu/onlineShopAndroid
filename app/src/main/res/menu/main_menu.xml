@@ -12,6 +12,10 @@
         android:title="Notes">
     </item>
 
+    <item android:id="@+id/sensors_menu"
+        android:title="Sensors">
+    </item>
+
     <item android:id="@+id/settings_menu"
         android:title="Settings">
     </item>

@@ -116,6 +116,10 @@ public class MainActivity extends AppCompatActivity
                 Intent notesIntent = new Intent(getApplicationContext(), NotesActivity.class);
                 getApplicationContext().startActivity(notesIntent);
                 break;
+            case R.id.sensors_menu:
+                Intent sensorsIntent = new Intent(getApplicationContext(), SensorActivity.class);
+                getApplicationContext().startActivity(sensorsIntent);
+                break;
             default:
                 return super.onOptionsItemSelected(item);
         }
