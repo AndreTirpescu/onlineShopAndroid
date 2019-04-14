@@ -120,6 +120,10 @@ public class MainActivity extends AppCompatActivity
                 Intent sensorsIntent = new Intent(getApplicationContext(), SensorActivity.class);
                 getApplicationContext().startActivity(sensorsIntent);
                 break;
+            case R.id.camera_menu:
+                Intent cameraIntent = new Intent(getApplicationContext(), CameraActivity.class);
+                getApplicationContext().startActivity(cameraIntent);
+                break;
             default:
                 return super.onOptionsItemSelected(item);
         }

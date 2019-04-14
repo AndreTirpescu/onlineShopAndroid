@@ -16,6 +16,10 @@
         android:title="Sensors">
     </item>
 
+    <item android:id="@+id/camera_menu"
+        android:title="Camera">
+    </item>
+
     <item android:id="@+id/settings_menu"
         android:title="Settings">
     </item>
